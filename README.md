@@ -1,9 +1,13 @@
 Java Full Stack Application using Spring Boot and React Javascript.
 
 I used Mysql for the Database.
+
 url: jdbc:mysql://localhost:3306/employeesDB
+
 username:Admin
+
 password:Admin
+
 You will need Intellij to run the program.
 Run the MyFinalApplication.
 
