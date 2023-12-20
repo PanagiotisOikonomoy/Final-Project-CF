@@ -12,7 +12,7 @@ You will need Intellij to run the program.
 Run the MyFinalApplication.
 
 Also you will need th Visual Studio.
-In the project directory, you can run:
+In the terminal, you can run:
 npm install react-scripts --save
 And after npm start
 
