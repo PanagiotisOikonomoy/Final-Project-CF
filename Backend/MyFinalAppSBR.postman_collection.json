@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "4866cfb9-506c-46c7-86da-2d49d46cadcc",
+		"name": "MyFinalAppSBR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29571189"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "get all employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all employees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9192/employees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9192",
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Found",
+							"code": 302,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 Dec 2023 22:50:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstname\": \"Panagiotis\",\n        \"lastname\": \"Oikonomou\",\n        \"email\": \"panagiotis-oikonomou@hotmail.com\",\n        \"department\": \"Junior Developer\"\n    },\n    {\n        \"id\": 2,\n        \"firstname\": \"Athanasios\",\n        \"lastname\": \"Androutsos\",\n        \"email\": \"athana@email.com\",\n        \"department\": \"Leader Developer\"\n    },\n    {\n        \"id\": 3,\n        \"firstname\": \"Panagiotis\",\n        \"lastname\": \"Mosxos\",\n        \"email\": \"mosxos@email.com\",\n        \"department\": \"Mobile Developer \"\n    },\n    {\n        \"id\": 4,\n        \"firstname\": \"Chrysostomos\",\n        \"lastname\": \"Kapetis\",\n        \"email\": \"kapetis@email.com\",\n        \"department\": \"Databases\"\n    },\n    {\n        \"id\": 5,\n        \"firstname\": \"Nikos\",\n        \"lastname\": \"Giannopoulos\",\n        \"email\": \"nikGian@email.com\",\n        \"department\": \"Software Engineer\"\n    },\n    {\n        \"id\": 6,\n        \"firstname\": \"Aleksios\",\n        \"lastname\": \"Oikonomou\",\n        \"email\": \"alekOik@gmail.com\",\n        \"department\": \"Senior Developer\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "add a new employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Panagiotis\",\r\n    \"lastname\" : \"Oikonomou\",\r\n    \"email\" : \"panagiotis@email.com\",\r\n    \"department\" : \"Webdesign & Development\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update employees",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Dimitris\",\r\n    \"lastname\": \"Oikonomou\",\r\n    \"email\": \"panagiotis@email.com\",\r\n    \"department\": \"Webdesign & Development\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/employees/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"employees",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a employee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Athanasios\",\r\n    \"lastname\" : \"Androutsos\",\r\n    \"email\" : \"androutsos@email.com\",\r\n    \"department\" : \"Software Engineering\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9192/employees/employee/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"employees",
+								"employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a employee by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9192/employees/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9192",
+							"path": [
+								"employees",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
