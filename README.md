@@ -14,6 +14,7 @@ Run the MyFinalApplication.
 Also you will need th Visual Studio.
 In the terminal, you can run:
 npm install react-scripts --save
+
 And after npm start
 
 or 
